@@ -1,4 +1,4 @@
-import { AtuhController } from './controllers/auth.controller';
+import { AuthController } from './controllers/auth.controller';
 import { JwtStrategy } from './strategy/jwt.strategy';
 import { LocalStrategy } from './strategy/local.strategy';
 import { AuthService } from './service/auth.service';
@@ -19,7 +19,7 @@ import { JwtModule } from '@nestjs/jwt';
         })
     ],
     providers: [Bcrypt, AuthService, LocalStrategy, JwtStrategy],
-    controllers: [AtuhController],
+    controllers: [AuthController],
     exports: [Bcrypt]
 })
 export class AuthModule { }
